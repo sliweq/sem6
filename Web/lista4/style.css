@@ -1,0 +1,37 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("img/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.my-slider .carousel-indicators {
+    top: 10px;
+    left: 50%;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.view:hover img {
+    transform: scale(1.05);
+}
+
+.view img {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    transition: transform 0.2s ease;
+}

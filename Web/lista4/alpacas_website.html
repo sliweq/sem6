@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Super Single Page about Alpacas</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <!-- <link rel="stylesheet" href="css/mdb.min.css"> -->
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    </style>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Option 1</a>
+                            <a class="dropdown-item" href="#">Option 2</a>
+                            <a class="dropdown-item" href="#">Option 3</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+    <div id="intro" class="view">
+        <div class="mask rgba-stylish-strong">
+            <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="col-md-10">
+                        <!-- Heading -->
+                        <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Alpacas</h2>
+                        <!-- Divider -->
+                        <hr class="hr-light">
+                        <!-- Description -->
+
+                        <!--/.Mask-->
+                        <h4 class="white-text my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+                            consequuntur.
+                        </h4>
+                        <button type="button" class="btn btn-outline-white">Know more<i
+                                class="fas fa-book ml-2"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="mask">
+            </div>
+        </div>
+    </div>
+
+
+
+</head>
+
+<body>
+    <!-- Start your project here-->
+
+    <!--Main Navigation-->
+    <header>
+        <!-- Carocard -->
+        <div class="container  my-5 shadow-lg p-3 mb-5 bg-white rounded">
+            <div id="demo" class="my-slider  carousel slide" data-ride="carousel">
+                <div class="container position-relative">
+
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <div class="card">
+                            <img src="img/1.jpg" class="d-block w-100" alt="Los Angeles">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">First slide label</h5>
+                                <p class="card-text">1Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                </p>
+                                <a href="#!" class="btn btn-primary btn-sm openModal" data-img="img/1.jpg">Button1</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="img/2.jpg" class="d-block w-100" alt="Los Angeles">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Second slide label</h5>
+                                <p class="card-text">2Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                </p>
+                                <a href="#!" class="btn btn-primary btn-sm openModal" data-img="img/2.jpg">Button2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="img/3.jpg" class="d-block w-100" alt="Los Angeles">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Third slide label</h5>
+                                <p class="card-text">3Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                </p>
+                                <a href="#!" class="btn btn-primary btn-sm openModal" data-img="img/3.jpg">Button3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+
+        </div>
+        <!-- Carocard -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered animate__animated animate__fadeIn" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Just alpaca</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" class="img-fluid animate__animated" alt="Powiększony obraz">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+
+
+    </header>
+    <!--Main layout-->
+    <main class="mt-5">
+
+
+
+        <div class="container">
+            <!--Section: LastTravels-->
+            <section id="lastTravels" class="text-center">
+                <!--Grid row-->
+                <div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine">
+                    <div class="row">
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-12 mb-4">
+                            <div class="view overlay z-depth-1-half">
+                                <img src="img/trip1.jpg" class="img-fluid" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-blue-light"></div>
+                                </a>
+                            </div>
+                            <h4 class="my-4 font-weight-bold">Alpaca 1</h4>
+                            <p class="grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
+                                am, aperiam minima assumenda deleniti hic.
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="view overlay z-depth-1-half">
+                                <img src="img/trip2.jpg" class="img-fluid" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-blue-light"></div>
+                                </a>
+                            </div>
+                            <h4 class="my-4 font-weight-bold">Alpaca 2</h4>
+                            <p class="grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
+                                am, aperiam minima assumenda deleniti hic.
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="view overlay z-depth-1-half">
+                                <img src="img/trip3.jpg" class="img-fluid" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-blue-light"></div>
+                                </a>
+                            </div>
+                            <h4 class="my-4 font-weight-bold">Alpaca 3</h4>
+                            <p class="grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
+                                am, aperiam minima assumenda deleniti hic.
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                </div>
+                <!--Grid row-->
+                <!--Grid row-->
+                <div data-aos="fade-left" data-aos-offset="50" data-aos-easing="ease-in-sine">
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-12 mb-4">
+                            <div class="view overlay z-depth-1-half">
+                                <img src="img/trip4.jpg" class="img-fluid" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-blue-light"></div>
+                                </a>
+                            </div>
+                            <h4 class="my-4 font-weight-bold">Alpaca 4</h4>
+                            <p class="grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
+                                am, aperiam minima assumenda deleniti hic.
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="view overlay z-depth-1-half">
+                                <img src="img/trip5.jpg" class="img-fluid" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-blue-light"></div>
+                                </a>
+                            </div>
+                            <h4 class="my-4 font-weight-bold">Alpaca 5</h4>
+                            <p class="grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
+                                am, aperiam minima assumenda deleniti hic.
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="view overlay z-depth-1-half">
+                                <img src="img/trip6.jpg" class="img-fluid" alt="">
+                                <a href="#!">
+                                    <div class="mask rgba-blue-light"></div>
+                                </a>
+                            </div>
+                            <h4 class="my-4 font-weight-bold">Alpaca 6</h4>
+                            <p class="grey-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
+                                am, aperiam minima assumenda deleniti hic.
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                </div>
+                <!--Grid row-->
+            </section>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Text:Photo 1:3 -->
+        <div class="container my-5">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <h2>Alpacas </h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, recusandae.</p>
+                </div>
+
+
+
+                <div class="col-md-9">
+                    <div data-aos="zoom-in">
+                        <img src="img/tmp.jpg" class="img-fluid rounded" alt="Podróżowanie">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Text:Photo 1:3 -->
+
+        <hr class="my-5">
+
+        <!--Section: Contact-->
+
+
+        <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+
+
+            <section id="contact" class="container my-5 animate__animated animate__fadeInUp">
+                <h2 class="text-center mb-4">Contact</h2>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" required maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Surname</label>
+                        <input type="text" class="form-control" required maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" id="enablePhone" class="form-check-input">
+                        <label for="enablePhone">Add phone number</label>
+                    </div>
+                    <div class="mb-3" , id="slaiderContainer" , style="display: none;">
+                        <label for="formControlRange">Phone number: <span id="rangeValue">+48 000000001</span></label>
+                        <input type="range" class="form-control-range" min="0.00000001" max="9.999999999"
+                            step="0.00000001" id="formControlRange" value="0.0000001">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" optional maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="3" required maxlength="1000"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary " >Send</button>
+
+                </form>
+            </section>
+
+        </div>
+        <!--Section: Contact-->
+        <hr class="my-5">
+        <!-- Google Maps Section -->
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Our location</h2>
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <div data-aos="zoom-in-up">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d351.46002397704945!2d17.057039933416057!3d51.10989285793555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9d547361e17%3A0x161523037438268b!2sD-2%2C%20plac%20Grunwaldzki%209%2C%2050-384%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1742376476215!5m2!1spl!2spl"
+                            width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h2>Wroclaw University of Science and Technology</h2>
+                    <p>D2-107b</p>
+                    <p>plac Grunwaldzki 9</p>
+                    <p>50-384 Wrocław</p>
+                </div>
+            </div>
+        </section>
+        <!-- Google Maps Section -->
+        <hr class="my-5">
+
+        <!-- FAQ Section -->
+        <section class="container my-5">
+            <h2 class="text-center mb-4">FAQ</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                Question #1 Lorem ipsum ?
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptate hic minus, et vero
+                            reprehenderit.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Question #2 Lorem ipsum ?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptate hic minus, et vero
+                            reprehenderit.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Question #3 Lorem ipsum ?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia voluptate hic minus, et vero
+                            reprehenderit.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <hr class="my-5">
+
+        <!-- Quote -->
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <blockquote class="blockquote">
+                        <p class="mb-4">“Alpacas don t just walk through life; they float with grace.”</p>
+                        <footer class="blockquote-footer">Anonymous</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <!-- Quote -->
+
+        <hr class="my-5">
+
+        <!-- Chart -->
+
+        <div class="container  my-5">
+            <h2>Llama family popularity chart</h2>
+            <div>
+                <canvas id="llamaChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Chart -->
+
+        <hr class="my-5">
+    </main>
+    <!--/Main layout-->
+
+    <!-- End your project here-->
+
+    <!--Footer-->
+    <footer class="bg-light text-center py-3">
+        <div class="container">
+            <p>Made by Jakub Śliwka, Jan Maciuk &copy; 2025 All rights reserved </p>
+        </div>
+    </footer>
+    <!--Footer-->
+
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="node_modules/aos/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        $(document).ready(function () {
+            $('.dropdown').on('show.bs.dropdown', function (e) {
+                $(this).find('.dropdown-menu').first().stop(true, true).fadeIn(300);
+            });
+
+            $('.dropdown').on('hide.bs.dropdown', function (e) {
+                $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(300);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
