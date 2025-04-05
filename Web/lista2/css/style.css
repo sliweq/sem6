@@ -1,0 +1,50 @@
+.naph-announcement {
+    color: #fff;
+    background-color: #FF5733;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.wrap {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* apply to whole page xddd */
+ul li {
+    border-bottom: 1px solid #8f8d8d;
+    padding: 5px;
+}
+
+
+
