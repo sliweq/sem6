@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socket Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="popup.css" />
+  <link rel="stylesheet" href="buttons.css" />
+  <link rel="stylesheet" href="userlist.css" />
+  <link rel="stylesheet" href="greeting.css" />
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="chat-layout">
+      <aside class="sidebar">
+        <div class="sidebar__header">
+          <h2>Add you custom room</h2>
+          <button id="createRoomButton">Create Room</button>
+
+          <div class="popup" id="popup">
+            <div class="popup-content">
+              <span class="close">&times;</span>
+              <h2>Create a new room</h2>
+              <form id="createRoomForm">
+                <input type="text" id="roomName" placeholder="Enter room name" required />
+                <button type="submit">Create</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar__header">
+          <h2>Rooms</h2>
+        </div>
+        <ul id="roomList" class="sidebar__list"></ul>
+      </aside>
+
+      <main>
+        <section id="greeting">
+          <div>
+            Welcome to the chat application!
+            <p>To get started, please select a room from the list on the left.</p>
+            <p>If you want to create a new room, please enter the room name below and click "Create Room".</p>
+          </div>
+
+        </section>
+
+        <section id="chatArea" class="chatArea hidden">
+          <div id="RoomName"></div>
+          <ul id="messages" class="chat-display"></ul>
+
+          <p class="activity"></p>
+
+          <div class="form-msg">
+            <form id="messageForm">
+
+              <input id="message" type="text" placeholder="Type a message..." autocomplete="off" />
+              <button>Send</button>
+              <input type="file" name="Attachment" id="Attachment" accept="image/png, image/gif, image/jpeg, audio/mpeg" />
+
+              <div id="fileError" style="color: red;"></div>
+            </form>
+          </div>
+          <button id="quit-button" class="hidden">Quit</button>
+        </section>
+      </main>
+      <aside>
+        <div id="userListContainer" class="hidden">
+          <h2>Users in this room:</h2>
+          <ul id="userList"></ul>
+        </div>
+
+      </aside>
+      
+
+    </div>
+  </div>
+
+</body>
+
+</html>
