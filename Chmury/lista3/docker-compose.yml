@@ -1,0 +1,51 @@
+services:
+  MicroReservation.API:
+    image: ${DOCKER_REGISTRY-}reservationmicroservice:v1
+    build:
+      context: ./
+      dockerfile: MicroReservation.API/Dockerfile
+    ports:
+      - "8080:80"
+
+    env_file:
+      - common.env
+  MicroLaundry.API:
+    image: ${DOCKER_REGISTRY-}laundrymicroservice:v1
+    build:
+      context: ./
+      dockerfile: MicroLaundry.API/Dockerfile
+    ports:
+      - "5432"
+      - "5672"
+    env_file:
+      - common.env
+  MicroHotelService.API:
+    image: ${DOCKER_REGISTRY-}hotelservicemicroservice:v1
+    build:
+      context: ./
+      dockerfile: MicroHotelService.API/Dockerfile
+    ports:
+      - "5432"
+      - "5672"
+    env_file:
+      - common.env
+  MicroCuisine.API:
+    image: ${DOCKER_REGISTRY-}cuisinemicroservice:v1
+    build:
+      context: ./
+      dockerfile: MicroCuisine.API/Dockerfile
+    ports:
+      - "5432"
+      - "5672"
+    env_file:
+      - common.env
+  MicroCleanService.API:
+    image: ${DOCKER_REGISTRY-}cleansrvicemicroservice:v1
+    build:
+      context: ./
+      dockerfile: MicroCleanService.API/Dockerfile
+    ports:
+      - "5432"
+      - "5672"
+    env_file:
+      - common.env
