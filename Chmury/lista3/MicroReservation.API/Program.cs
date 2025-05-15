@@ -26,8 +26,10 @@ Log.Information("Starting api reservation");
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog();
-builder.WebHost.UseUrls("http://0.0.0.0:80");
-
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5068);
+});
 IConfigurationBuilder confBuilder = new ConfigurationBuilder()
     .AddEnvironmentVariables();
     // .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), ".."))

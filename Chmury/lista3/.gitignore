@@ -6,6 +6,9 @@ Logs/*
 Logs/
 Logs
 
+terraform/*
+.terraform*
+
 common.env
 # User-specific files
 *.rsuser

@@ -5,7 +5,8 @@ services:
       context: ./
       dockerfile: MicroReservation.API/Dockerfile
     ports:
-      - "8080:80"
+      - "5068:5068"
+      - "7041:7041"
 
     env_file:
       - common.env
@@ -14,9 +15,6 @@ services:
     build:
       context: ./
       dockerfile: MicroLaundry.API/Dockerfile
-    ports:
-      - "5432"
-      - "5672"
     env_file:
       - common.env
   MicroHotelService.API:
@@ -24,9 +22,6 @@ services:
     build:
       context: ./
       dockerfile: MicroHotelService.API/Dockerfile
-    ports:
-      - "5432"
-      - "5672"
     env_file:
       - common.env
   MicroCuisine.API:
@@ -34,9 +29,6 @@ services:
     build:
       context: ./
       dockerfile: MicroCuisine.API/Dockerfile
-    ports:
-      - "5432"
-      - "5672"
     env_file:
       - common.env
   MicroCleanService.API:
@@ -44,8 +36,5 @@ services:
     build:
       context: ./
       dockerfile: MicroCleanService.API/Dockerfile
-    ports:
-      - "5432"
-      - "5672"
     env_file:
       - common.env

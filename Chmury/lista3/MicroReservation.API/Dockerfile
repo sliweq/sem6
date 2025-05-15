@@ -1,7 +1,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-EXPOSE 80
+EXPOSE 5068
+EXPOSE 7041
 
 COPY MicroReservation.API/MicroReservation.API.csproj MicroReservation.API/
 COPY MicroReservation.Domain/MicroReservation.Domain.csproj MicroReservation.Domain/
