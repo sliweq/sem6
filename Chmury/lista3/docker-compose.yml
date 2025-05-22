@@ -3,7 +3,7 @@ services:
     image: ${DOCKER_REGISTRY-}reservationmicroservice:v1
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 1
     build:
       context: ./
       dockerfile: MicroReservation.API/Dockerfile
@@ -47,7 +47,7 @@ services:
     image: ${DOCKER_REGISTRY-}cleansrvicemicroservice:v1
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 3
     build:
       context: ./
       dockerfile: MicroCleanService.API/Dockerfile
