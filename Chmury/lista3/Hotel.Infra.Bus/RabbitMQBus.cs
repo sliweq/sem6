@@ -1,4 +1,5 @@
-﻿using Hotel.Common.Domain.Bus;
+﻿using Autofac.Core;
+using Hotel.Common.Domain.Bus;
 using Hotel.Common.Domain.Commands;
 using Hotel.Common.Domain.Events;
 using MediatR;
@@ -9,7 +10,7 @@ using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
-using static Microsoft.IO.RecyclableMemoryStreamManager;
+
 
 
 namespace Hotel.Infra.Bus
@@ -31,6 +32,7 @@ namespace Hotel.Infra.Bus
             _serviceScopeFactory = serviceScopeFactory;
             _configRoot = configRoot;
             _logger = logger;
+            
         }
 
         public Task SendCommand<T>(T command) where T : Command
@@ -89,10 +91,10 @@ namespace Hotel.Infra.Bus
 
             _handlers[eventName].Add(handlerType);
 
-            await StartBasicConsumeAsync<T>();
+            await StartBasicConsumeAsync<T,TH>();
         }
 
-        private async Task StartBasicConsumeAsync<T>() where T : Event
+        private async Task StartBasicConsumeAsync<T, TH>() where T : Event where TH: IEventHandler<T>
         {
             var factory = new ConnectionFactory() { };
             factory.Uri = new Uri(_configRoot["AmqpSettings:Amqpurl"]);
@@ -103,19 +105,37 @@ namespace Hotel.Infra.Bus
             var channel = await connection.CreateChannelAsync();
 
             var exchangeName = typeof(T).Name;
+            var handlerType = typeof(TH);
+
 
             await channel.ExchangeDeclareAsync(exchangeName, ExchangeType.Fanout);
 
-            var queueName = $"{exchangeName}_{Guid.NewGuid()}";
+            var queueName = $"{exchangeName}.{handlerType.Name}";
             //var queueName = $"exchangeName";
 
             await channel.QueueDeclareAsync(queueName, false, false, false, null);
             await channel.QueueBindAsync(queueName, exchangeName, "");
 
             var consumer = new AsyncEventingBasicConsumer(channel);
-            consumer.ReceivedAsync += Consumer_Received;
+            consumer.ReceivedAsync += async (model, ea) =>
+            {
+                var eventName = ea.Exchange;
+                var message = Encoding.UTF8.GetString(ea.Body.ToArray());
 
-            await channel.BasicConsumeAsync(queueName, true, consumer);
+                try
+                {
+                    await ProcessEvent(eventName, message);
+                    await channel.BasicAckAsync(ea.DeliveryTag, multiple: false);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"Failed to process event: {eventName}");
+                    // Możesz też tutaj dodać channel.BasicNack(ea.DeliveryTag, false, true);
+                }
+            };
+
+
+            await channel.BasicConsumeAsync(queueName, false, consumer);
 
 
             //var eventName = typeof(T).Name;

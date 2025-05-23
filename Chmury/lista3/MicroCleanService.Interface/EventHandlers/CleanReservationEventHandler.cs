@@ -8,12 +8,12 @@ using Microsoft.Extensions.Logging;
 namespace MicroCleanService.Interface.EventHandlers
 {
 
-    public class CreateReservationEventHandler : IEventHandler<CreateReservationEvent>
+    public class CleanReservationEventHandler : IEventHandler<CreateReservationEvent>
     {
         private readonly IMediator _mediator;
-        private readonly ILogger<CreateReservationEventHandler> _logger;
+        private readonly ILogger<CleanReservationEventHandler> _logger;
 
-        public CreateReservationEventHandler(IMediator mediator, ILogger<CreateReservationEventHandler> logger)
+        public CleanReservationEventHandler(IMediator mediator, ILogger<CleanReservationEventHandler> logger)
         {
             _mediator = mediator;
             _logger = logger;

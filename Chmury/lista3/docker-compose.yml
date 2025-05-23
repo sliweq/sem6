@@ -1,5 +1,5 @@
 services:
-  MicroReservation.API:
+  microreservation_api:
     image: ${DOCKER_REGISTRY-}reservationmicroservice:v1
     deploy:
       mode: replicated
@@ -13,7 +13,7 @@ services:
 
     env_file:
       - common.env
-  MicroLaundry.API:
+  microlaundryapi:
     image: ${DOCKER_REGISTRY-}laundrymicroservice:v1
     deploy:
       mode: replicated
@@ -23,7 +23,7 @@ services:
       dockerfile: MicroLaundry.API/Dockerfile
     env_file:
       - common.env
-  MicroHotelService.API:
+  microhotelservice_api:
     image: ${DOCKER_REGISTRY-}hotelservicemicroservice:v1
     deploy:
       mode: replicated
@@ -33,7 +33,7 @@ services:
       dockerfile: MicroHotelService.API/Dockerfile
     env_file:
       - common.env
-  MicroCuisine.API:
+  microcuisine_api:
     image: ${DOCKER_REGISTRY-}cuisinemicroservice:v1
     deploy:
       mode: replicated
@@ -43,7 +43,7 @@ services:
       dockerfile: MicroCuisine.API/Dockerfile
     env_file:
       - common.env
-  MicroCleanService.API:
+  microcleanservice_api:
     image: ${DOCKER_REGISTRY-}cleansrvicemicroservice:v1
     deploy:
       mode: replicated

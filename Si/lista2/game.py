@@ -26,7 +26,7 @@ def play_simple_game(n,m,d, heuristics_player_one, heuristics_player_two, advanc
         # player_one.print_board()
         # print("Player 1 (B) turn")
         if minimax:
-            _,move,tmp = player_one.alpha_beta_minmax(deepcopy(player_one.get_board()), d, float('-inf'), float('inf'), True)
+            _,move,tmp = player_one.alpha_beta_minmax(deepcopy(player_one.get_board()), d, -100, 100, True)
         else:
             _,move,tmp = player_one.minimax(deepcopy(player_one.get_board()), d, True)
         visited_nodes += tmp
@@ -42,7 +42,7 @@ def play_simple_game(n,m,d, heuristics_player_one, heuristics_player_two, advanc
 
         # print("Player 2 (W) turn")
         if minimax:
-            _,move,tmp = player_two.alpha_beta_minmax(deepcopy(player_two.get_board()), d, float('-inf'), float('inf'), True)
+            _,move,tmp = player_two.alpha_beta_minmax(deepcopy(player_two.get_board()), d, -100, 100, True)
         else:
             _,move,tmp = player_two.minimax(deepcopy(player_two.get_board()), d, True)
         
@@ -64,10 +64,10 @@ def play_simple_game(n,m,d, heuristics_player_one, heuristics_player_two, advanc
 
 
 if __name__ == "__main__":
-    d = 4 # depth
+    d = 6 # depth
 
-    n = 5 # number of rows
-    m = 6 # number of columns
+    n = 15 # number of rows
+    m = 15 # number of columns
     
     timer = time()
 

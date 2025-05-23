@@ -46,7 +46,7 @@ builder.Services.AddSingleton<IEventBus, RabbitMQBus>();
 
 builder.Services.AddTransient<IRequestHandler<CreateHotelServiceScheduleCommand, bool>, CreateHotelServiceScheduleCommandHandler>();
 builder.Services.AddTransient<IRequestHandler<GetAvailableHotelBoyQuery, List<HotelBoyDTO>>, GetAvailableHotelBoyQueryHandler>();
-builder.Services.AddTransient<CreateReservationEventHandler>();
+builder.Services.AddTransient<HotelServiceReservationEventHandler>();
 
 var app = builder.Build();
 
@@ -54,7 +54,7 @@ using (var scope = app.Services.CreateScope())
 {
     var eventBus = scope.ServiceProvider.GetRequiredService<IEventBus>();
 
-    await eventBus.Subscribe<CreateReservationEvent, CreateReservationEventHandler>();
+    await eventBus.Subscribe<CreateReservationEvent, HotelServiceReservationEventHandler>();
 }
 
 app.Run();

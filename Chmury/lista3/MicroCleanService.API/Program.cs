@@ -40,7 +40,7 @@ builder.Services.AddSingleton<IEventBus, RabbitMQBus>();
 builder.Services.AddTransient<IRequestHandler<CreateCleaningScheduleCommand, bool>, CreateCleaningScheduleCommandHandler>();
 
 
-builder.Services.AddTransient<CreateReservationEventHandler>();
+builder.Services.AddTransient<CleanReservationEventHandler>();
 
 var app = builder.Build();
 
@@ -48,7 +48,7 @@ using (var scope = app.Services.CreateScope())
 {
     var eventBus = scope.ServiceProvider.GetRequiredService<IEventBus>();
 
-    await eventBus.Subscribe<CreateReservationEvent, CreateReservationEventHandler>();
+    await eventBus.Subscribe<CreateReservationEvent, CleanReservationEventHandler>();
 }
 
 app.Run();

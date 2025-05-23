@@ -11,12 +11,12 @@ using Microsoft.Extensions.Logging;
 
 namespace MicroCuisine.Interface.EventHandlers
 {
-    public class CreateReservationEventHandler : IEventHandler<CreateReservationEvent>
+    public class CuisineReservationEventHandler : IEventHandler<CreateReservationEvent>
     {
         private readonly IMediator _mediator;
-        private readonly ILogger<CreateReservationEventHandler> _logger;
+        private readonly ILogger<CuisineReservationEventHandler> _logger;
 
-        public CreateReservationEventHandler(IMediator mediator, ILogger<CreateReservationEventHandler> logger)
+        public CuisineReservationEventHandler(IMediator mediator, ILogger<CuisineReservationEventHandler> logger)
         {
             _mediator = mediator;
             _logger = logger;

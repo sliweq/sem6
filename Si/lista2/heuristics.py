@@ -1,38 +1,13 @@
 from board import Board
 
 def heuristics_paws_on_board(board: Board, on_move: str) -> int:
-    """
-    Heuristic function to evaluate the board state for the given player.
-    The heuristic is computed as the difference between the number of pieces of the player and the number of pieces of the opponent.
-    """
+    
     
     enemy = 'B' if on_move == 'W' else 'W'
     score = 0
     return sum(count == on_move for row in board.board for count in row) - sum(count == enemy for row in board.board for count in row)
-    # for n in range(board.n):
-    #     for m in range(board.m):
-    #         if board.board[n][m] == on_move:
-    #             score += 1
-    #         elif board.board[n][m] == enemy:
-    #             score -= 1
-    #             # punish for enemy pieces around
-    #             # if n-1 >= 0 and board.board[n-1][m] == enemy:
-    #             #     score -= 1
-    #             # if m+1 < board.m and board.board[n][m+1] == enemy:
-    #             #     score -= 1
-    #             # if m-1 >= 0 and board.board[n][m-1] == enemy:
-    #             #     score -= 1
-    #             # if n+1 < board.n and board.board[n+1][m] == enemy:
-    #             #     score -= 1
-    # return score
 
 def heuristics_central_vs_edges(board: Board, on_move: str) -> int:
-    """
-    Heuristic function to evaluate the board state for the given player.
-    Considers:
-    - Bonus for own pieces on the edges and corners.
-    - Bonus if own edge pieces are adjacent to enemy pieces (potential to capture).
-    """
 
     enemy = 'B' if on_move == 'W' else 'W'
     score = 0
@@ -60,10 +35,7 @@ def heuristics_central_vs_edges(board: Board, on_move: str) -> int:
     return score
 
 def heuristics_inaccessible_pawns(board: Board, on_move: str) -> int:
-    """
-    Heuristic function to evaluate the board state for the given player.
-    The heuristic is calculated based on the number of pawns that are not accessible to the enemy.
-    """
+
 
     enemy = 'B' if on_move == 'W' else 'W'
     score = 0
@@ -85,10 +57,7 @@ def heuristics_inaccessible_pawns(board: Board, on_move: str) -> int:
     return score
 
 def heuristics_safe_pawns(board: Board, on_move: str) -> int:
-    """
-    Heuristic function to evaluate the board state for the given player.
-    The heuristic is calculated based on the number of pawns that are not accessible to the enemy.
-    """
+    
     enemy = 'B' if on_move == 'W' else 'W'
     score = 0
 
@@ -109,10 +78,7 @@ def heuristics_safe_pawns(board: Board, on_move: str) -> int:
     return score
 
 def heuristics_pawns_moves(board: Board, on_move: str) -> int:
-    """
-    Heuristic function to evaluate the board state for the given player.
-    The heuristic is computed based on the number of possible moves for the player.
-    """
+    
     enemy = 'B' if on_move == 'W' else 'W'
     score = 0
 
@@ -133,10 +99,7 @@ def heuristics_pawns_moves(board: Board, on_move: str) -> int:
     return score
 
 def heuristics_endgame(board: Board, on_move: str) -> int:
-    """
-    Heuristic function to evaluate the board state for the given player.
-    The heuristic is computed based on the number of possible moves for the player.
-    """
+    
     enemy = 'B' if on_move == 'W' else 'W'
     score = 0
 
@@ -178,10 +141,7 @@ def heuristics_endgame(board: Board, on_move: str) -> int:
     return score
 
 def more_allays_or_enemies(board: Board,position: tuple[int,int]) -> int:
-    """
-    Heuristic function to evaluate the board state for the given player.
-    The heuristic is computed based on the number of possible moves for the player.
-    """
+    
     enemy = board.board[position[0]][position[1]]
     on_move = 'B' if enemy == 'W' else 'W'
 

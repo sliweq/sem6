@@ -7,13 +7,13 @@ using Microsoft.Extensions.Logging;
 
 namespace MicroHotelService.Interface.EventHandlers
 {
-    public class CreateReservationEventHandler : IEventHandler<CreateReservationEvent>
+    public class HotelServiceReservationEventHandler : IEventHandler<CreateReservationEvent>
     {
         private readonly IMediator _mediator;
-        private readonly ILogger<CreateReservationEventHandler> _logger;
+        private readonly ILogger<HotelServiceReservationEventHandler> _logger;
 
 
-        public CreateReservationEventHandler(IMediator mediator, ILogger<CreateReservationEventHandler> logger)
+        public HotelServiceReservationEventHandler(IMediator mediator, ILogger<HotelServiceReservationEventHandler> logger)
         {
             _mediator = mediator;
             _logger = logger;

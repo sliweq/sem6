@@ -45,7 +45,7 @@ builder.Services.AddSingleton<IEventBus, RabbitMQBus>();
 
 builder.Services.AddTransient<IRequestHandler<CreateCuisineScheduleCommand, bool>, CreateCuisineScheduleCommandHandler>();
 builder.Services.AddTransient<IRequestHandler<GetCuisineScheduleQuery, List<CuisineScheduleDTO>>, GetCuisineScheduleQueryHandler>();
-builder.Services.AddTransient<CreateReservationEventHandler>();
+builder.Services.AddTransient<CuisineReservationEventHandler>();
 
 var app = builder.Build();
 
@@ -53,7 +53,7 @@ using (var scope = app.Services.CreateScope())
 {
     var eventBus = scope.ServiceProvider.GetRequiredService<IEventBus>();
 
-    await eventBus.Subscribe<CreateReservationEvent, CreateReservationEventHandler>();
+    await eventBus.Subscribe<CreateReservationEvent, CuisineReservationEventHandler>();
 }
 
 app.Run();
