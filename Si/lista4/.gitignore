@@ -1,0 +1,4 @@
+venv/*
+venv
+CTG.csv
+csv_data_analyse.html

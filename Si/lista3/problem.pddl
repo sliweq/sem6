@@ -14,6 +14,7 @@
   )
 
   (:init
+
     (package package1) (package package2)
     (package package3) (package package4)
 
@@ -28,9 +29,6 @@
     (at package3 warehouse1)
     (at package4 warehouse1)
 
-    (free car1) (free car2)
-    (free car3) (free plane1)
-    (free ship1)
 
     (allowed-move car1 warehouse1 airport1)
     (allowed-move car1 airport1 warehouse1)
@@ -46,7 +44,28 @@
 
     (allowed-move car3 harbor2 warehouse2)
     (allowed-move car3 warehouse2 harbor2)
+
+    (= (capacity car1) 2)
+    (= (capacity car2) 1)
+    (= (capacity car3) 2)
+    (= (capacity plane1) 4)
+    (= (capacity ship1) 3)
+
+    (= (load car1) 0)
+    (= (load car2) 0)
+    (= (load car3) 0)
+    (= (load plane1) 0)
+    (= (load ship1) 0)
+
     (= (total-cost) 0)
+
+    (= (move-cost car1) 2)
+    (= (move-cost car2) 2)
+    (= (move-cost car3) 2)
+    (= (move-cost plane1) 5)
+    (= (move-cost ship1) 4)
+
+
   )
 
   (:goal
@@ -57,7 +76,6 @@
       (at package4 warehouse2)
     )
   )
-  
   (:metric minimize (total-cost))
 
 )

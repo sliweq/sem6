@@ -32,15 +32,12 @@
     )
   )
 
-(:action move
-  :parameters (?r - robo ?from - room ?to - room)
-  :precondition (at ?r ?from)
-  :effect (and
-    (not (at ?r ?from))
-    (at ?r ?to)
-  )
-)
-
-
-
+    (:action move
+      :parameters (?r - robo ?from - room ?to - room)
+      :precondition (at ?r ?from)
+      :effect (and
+        (not (at ?r ?from))
+        (at ?r ?to)
+      )
+    )
 )
