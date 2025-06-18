@@ -122,3 +122,57 @@ try:
     print("Prediction result:", result)
 except ValueError as e:
     print("Error:", e)	
+
+
+
+    
+def train_and_evaluate(train_data, test_data, lr=0.001, epochs=20):
+    X_train, y_train = [], []
+    for img1, img2, label in train_data:
+        try:
+            diff = get_diff_vector(os.path.join(img_dir, img1), os.path.join(img_dir, img2))
+            X_train.append(diff.squeeze(0))
+            y_train.append(label)
+        except:
+            continue
+
+    X_train = torch.stack(X_train)
+    y_train = torch.tensor(y_train)
+
+    model = FaceVerificationMLP()
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=lr)
+
+    for epoch in range(epochs):
+        model.train()
+        optimizer.zero_grad()
+        outputs = model(X_train)
+        loss = criterion(outputs, y_train)
+        loss.backward()
+        optimizer.step()
+
+    # Ewaluacja na testowym zbiorze
+    X_test, y_test = [], []
+    for img1, img2, label in test_data:
+        try:
+            diff = get_diff_vector(os.path.join(img_dir, img1), os.path.join(img_dir, img2))
+            X_test.append(diff.squeeze(0))
+            y_test.append(label)
+        except:
+            continue
+
+    X_test = torch.stack(X_test)
+    y_test = torch.tensor(y_test)
+
+    model.eval()
+    with torch.no_grad():
+        outputs = model(X_test)
+        _, predicted = torch.max(outputs, 1)
+
+    acc = accuracy_score(y_test, predicted)
+    prec = precision_score(y_test, predicted)
+    rec = recall_score(y_test, predicted)
+    f1 = f1_score(y_test, predicted)
+    cm = confusion_matrix(y_test, predicted)
+
+    return acc, prec, rec, f1, cm
