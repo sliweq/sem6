@@ -1,0 +1,285 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="65b80eb4-dd7c-4e3a-a58b-cde0526c078e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM SALESPERSON</ID>
+  <Name>DIM SALESPERSON</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4134" scrolltop="-5014" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11695" y="15028" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_SALESPERSON" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3387" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003b0d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="allegro_DIM_SALESPERSON" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-4134</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5014</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ff25e005-789f-4cf3-84fa-d993b7f824e8">
+    <DataSourceViewID>Mock Allegro</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="0df8061f-0c82-4333-aee9-98c21f7a8ad0">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="e79ba358-c502-46c7-947a-782814438c63">
+      <ID>Seller Id</ID>
+      <Name>Seller Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dc4e008d-b71f-49e5-aa14-e84cd8e4d958">
+          <DataType>WChar</DataType>
+          <DataSize>32</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee435d87-332f-4ec8-9de5-daeb7df55191">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>seller_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="db394adb-7c31-4fc8-a36d-9ed7fb6a8d92">
+          <AttributeID>Seller City</AttributeID>
+          <Name>Seller City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fd3e61f0-6513-4a46-8342-d7e2b2a2b3e6">
+          <AttributeID>Seller State</AttributeID>
+          <Name>Seller State</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="acd1dae9-4138-4070-a208-011c33e0e54e">
+          <AttributeID>State</AttributeID>
+          <Name>State</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a69b326a-acb4-4b86-ae89-6c31fb1fe16b">
+          <AttributeID>Capital</AttributeID>
+          <Name>Capital</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a385c13d-f3ef-473d-9e19-2a518ea18a74">
+          <AttributeID>Region</AttributeID>
+          <Name>Region</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2a29ce11-8db1-45f7-9ebf-8446a98a6eb4">
+          <AttributeID>Population Group</AttributeID>
+          <Name>Population Group</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="36791db9-da3e-43fb-8740-c1b6a702c352">
+          <AttributeID>Density Group</AttributeID>
+          <Name>Density Group</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f8410a66-ce0c-44ab-b072-d04acefb9ecd">
+          <AttributeID>Gdp Category</AttributeID>
+          <Name>Gdp Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a3d06ea8-f861-4599-867e-bfd63e252770">
+          <AttributeID>Poverty Category</AttributeID>
+          <Name>Poverty Category</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="42b7f08d-b0b0-4f24-a3ef-b2885fcc8d3b">
+      <ID>Seller City</ID>
+      <Name>Seller City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6136a0e2-03f7-4003-ae00-2d1c5f8a6a45">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09f4e02e-5a09-43fa-94c3-7c3c7d9cd38b">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>seller_city</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c259d24f-09a6-4d25-b877-01651b36860e">
+      <ID>Seller State</ID>
+      <Name>Seller State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f8a160de-8492-46e0-81ed-4d87300696de">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed0d2c79-217b-4c19-bc17-bed459bbf23a">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>seller_state</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9b674d4e-faa2-4fda-87d0-1a561fbbdce1">
+      <ID>State</ID>
+      <Name>State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="00b6f420-ecb9-4503-805f-2c017d6459a6">
+          <DataType>WChar</DataType>
+          <DataSize>19</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5aaf1624-9100-4f04-bcfb-0f68c782ecd3">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>state</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a9425e8e-864c-4d7a-a7ff-4257b9be0bbd">
+      <ID>Capital</ID>
+      <Name>Capital</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b01fa1d5-4962-430b-b201-c938bf5a2c87">
+          <DataType>WChar</DataType>
+          <DataSize>14</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="79276b53-578f-47cf-8f30-6059132b4d74">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>capital</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="92451bc9-25bd-48af-a050-4ae082a7c562">
+      <ID>Region</ID>
+      <Name>Region</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="200161de-77d1-4d9f-84d7-406588b946b9">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be108ccb-90ea-40ba-b9b2-11fb7913ede5">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f9ee8ad0-a46c-437b-8b73-b5fe915a14b2">
+      <ID>Population Group</ID>
+      <Name>Population Group</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c56b830c-2e75-48e3-b5d2-4f5fe9f9e2a0">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4903ae1e-fcbc-404f-83f9-b23a6b2e98cf">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>population_group</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6ed39211-495a-4e72-bd0d-1a8048c3bdb4">
+      <ID>Density Group</ID>
+      <Name>Density Group</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4299c499-5dd4-41b7-b95d-563676fa5f99">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6509caf-9bb3-4286-8532-b6cc011c7447">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>density_group</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="73826965-e8d0-4e1f-b96b-67b9451f87e6">
+      <ID>Gdp Category</ID>
+      <Name>Gdp Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1930adc6-9800-4f7b-82d3-f1adc9e8b893">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f3db7650-861c-47a1-ba03-b59e6000b142">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>gdp_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6cc38e6c-db71-42f4-a158-a9b1891cbce7">
+      <ID>Poverty Category</ID>
+      <Name>Poverty Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf38de15-e884-42cc-8023-ddc3a35ccb5f">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c7cbe2a-54ca-49f9-8008-72b9d0b0b7db">
+            <TableID>allegro_DIM_SALESPERSON</TableID>
+            <ColumnID>poverty_category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

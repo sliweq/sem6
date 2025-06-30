@@ -28,8 +28,17 @@ def get_embedding(image_path, distorted=False):
 
 # Function to compare two images and get the absolute difference vector
 def get_diff_vector(img1_path, img2_path, distorted=False):
-    emb1 = get_embedding(img1_path, distorted)
-    emb2 = get_embedding(img2_path, distorted)
+    if random.random() < 0.5 and distorted:
+        emb1 = get_embedding(img1_path, distorted)
+        emb2 = get_embedding(img2_path, distorted)
+    else:
+        if random.random() < 0.5:
+            emb1 = get_embedding(img1_path,distorted)
+            emb2 = get_embedding(img2_path)
+        else :
+            emb1 = get_embedding(img1_path)
+            emb2 = get_embedding(img2_path, distorted)
+        
     return torch.abs(emb1 - emb2)
 
 # Define the MLP model that takes the difference between two embeddings
@@ -147,7 +156,7 @@ def train_and_save_models_task_2():
 
     for lr in learning_rates:
         print(f"\nTraining with learning rate: {lr}")
-        acc, prec, rec, f1, cm, model = train_and_evaluate(train_data, test_set, lr=lr, epochs=20)
+        acc, prec, rec, f1, cm, model = train_and_evaluate(train_data, test_set, lr=lr, epochs=50)
         results[lr] = {
             "accuracy": acc,
             "precision": prec,
@@ -180,7 +189,7 @@ def train_and_save_models_task_3():
     train_sizes = [1000]
     test_size = 200
     epoch_counts = [1, 5, 10, 20, 50]  
-    learning_rate = 0.001 
+    learning_rate = 0.0001 
 
     train_sets, test_set = generate_datasets(train_sizes=train_sizes, test_size=test_size)
     train_data = train_sets[1000]
@@ -247,5 +256,28 @@ def evaluate_on_clean_and_distorted(model, test_data):
     print("===> Zaburzone dane:")
     print(f"Accuracy: {accuracy_score(y_true, pred_distorted):.4f}, F1: {f1_score(y_true, pred_distorted):.4f}")
 
-if __name__ == "__main__":
-    pass
+
+def train_with_blur_task5(train_data, test_data, lr=0.001, epochs=20, distortion_prob=0.5):
+    X_train, y_train = [], []
+    for img1, img2, label in train_data:
+        try:
+            distorted = random.random() < distortion_prob
+            diff = get_diff_vector(os.path.join(img_dir, img1), os.path.join(img_dir, img2), distorted=distorted)
+            X_train.append(diff.squeeze(0))
+            y_train.append(label)
+        except:
+            continue
+    X_train = torch.stack(X_train)
+    y_train = torch.tensor(y_train)
+    model = FaceVerificationMLP()
+    criterion = nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+    for epoch in range(epochs):
+        model.train()
+        optimizer.zero_grad()
+        outputs = model(X_train)
+        loss = criterion(outputs, y_train)
+        loss.backward()
+        optimizer.step()
+    evaluate_on_clean_and_distorted(model, test_data)
+    return model

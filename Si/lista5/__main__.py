@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import matplotlib.pyplot as plt
 
+from task4 import train_with_scheduler_and_early_stopping
 from tmp import generate_datasets
 from train import (
     train_and_save_models_task_1,
@@ -9,7 +10,8 @@ from train import (
     train_and_save_models_task_3,
     evaluate_on_clean_and_distorted,
     FaceVerificationMLP,
-    train_and_evaluate
+    train_and_evaluate,
+    train_with_blur_task5
 )
 import torch
 
@@ -27,7 +29,7 @@ def run_task_1_and_save():
     for size, data in train_sets.items():
         acc, prec, rec, f1, cm, model = train_and_evaluate(data, test_set)
         results[size] = {"accuracy": acc, "f1": f1}
-        torch.save(model, f"models/model_{size}_1.pth")
+        torch.save(model, f"models2/model_{size}_1.pth")
 
     sizes = sorted(results.keys())
     accs = [results[s]['accuracy'] for s in sizes]
@@ -81,6 +83,35 @@ def load_model_and_evaluate(model_path, test_data):
     model = torch.load(model_path)
     evaluate_on_clean_and_distorted(model, test_data)
 
+def run_task_4():
+    train_sizes = [100, 1000]
+    learning_rates = [0.0001, 0.001, 0.01]
+    epoch_counts = [10, 20, 50]
+    patience = 3
+
+    train_sets, test_set = generate_datasets(train_sizes=train_sizes, test_size=200)
+    results = {}
+
+    for size in train_sizes:
+        train_data = train_sets[size]
+        for lr in learning_rates:
+            for epochs in epoch_counts:
+                print(f"Training size={size}, lr={lr}, epochs={epochs}")
+                acc, prec, rec, f1, cm, model = train_with_scheduler_and_early_stopping(
+                    train_data, test_set, lr=lr, epochs=epochs, patience=patience)
+                results[(size, lr, epochs)] = {
+                    "accuracy": acc, "precision": prec, "recall": rec, "f1": f1, "confusion_matrix": cm
+                }
+    return results
+
+def run_task_5_with_mitigation(prob):
+    train_sizes = [1000]
+    test_size = 200
+    train_sets, test_set = generate_datasets(train_sizes=train_sizes, test_size=test_size)
+    train_data = train_sets[1000]
+    print("Training with distorted augmentation...")
+    model = train_with_blur_task5(train_data, test_set, lr=0.001, epochs=50, distortion_prob=prob)
+
 
 if __name__ == "__main__":
     print("=== Zadanie 1 ===")
@@ -92,6 +123,13 @@ if __name__ == "__main__":
     print("=== Zadanie 3 ===")
     run_task_3_and_save()
 
-    # print("=== Ocena modelu na czystych vs zaburzonych danych ===")
-    # _, test_set = generate_datasets(train_sizes=[1000], test_size=200)
-    # load_model_and_evaluate("models2/model_epochs_20.pth", test_set)
+    
+    # print("=== Zadanie 4 ===")
+    # run_task_4()
+
+    print("=== Zadanie 5 ===")
+    run_task_5_with_mitigation(0.5)
+    # print("=== Zadanie 5 ===")
+    # run_task_5_with_mitigation(0.2)
+    # print("=== Zadanie 5 ===")
+    # run_task_5_with_mitigation(0.05)

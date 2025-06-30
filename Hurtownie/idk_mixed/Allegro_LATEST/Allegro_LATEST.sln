@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Allegro_LATEST", "Allegro_LATEST\Allegro_LATEST.dtproj", "{AD93FE4A-DD99-627F-E6D2-CCCAC2729024}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD93FE4A-DD99-627F-E6D2-CCCAC2729024}.Development|Default.ActiveCfg = Development
+		{AD93FE4A-DD99-627F-E6D2-CCCAC2729024}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDDFDC42-3669-410A-BD79-6F926A510877}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,425 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f30e9889-728d-4d83-9a5c-0209a2e46892" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Mock Allegro</ID>
+  <Name>Mock Allegro</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Mock Allegro</DataSourceID>
+  <Schema>
+    <xs:schema id="Mock_x0020_Allegro" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Mock_x0020_Allegro" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="c7007352-694b-41db-ab7a-63596c21d9c0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="allegro_DIM_CUSTOMER" msprop:DbTableName="DIM_CUSTOMER" msprop:FriendlyName="DIM_CUSTOMER" msprop:TableType="Table" msprop:DbSchemaName="allegro" msprop:design-time-name="d1ad5a1c-c6cd-48aa-9042-d1b2558bea36">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="customer_id" msprop:FriendlyName="customer_id" msprop:DbColumnName="customer_id" msprop:design-time-name="6d990789-229a-429d-a7a2-cd67f5f1893c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="customer_unique_id" msprop:FriendlyName="customer_unique_id" msprop:DbColumnName="customer_unique_id" msprop:design-time-name="2e65e83e-ec8b-4ded-ae15-d0c2eb60975b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="customer_city" msprop:FriendlyName="customer_city" msprop:DbColumnName="customer_city" msprop:design-time-name="69049bf1-d9a9-4413-8f1d-09b2b5f2cb5a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="customer_state" msprop:FriendlyName="customer_state" msprop:DbColumnName="customer_state" msprop:design-time-name="5043b561-a68b-4454-9df8-66ec0e5147c2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="state" msprop:FriendlyName="state" msprop:DbColumnName="state" msprop:design-time-name="8653affd-cd52-4b0a-8b31-089188022f96" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="19" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="capital" msprop:FriendlyName="capital" msprop:DbColumnName="capital" msprop:design-time-name="bd9caa85-b7d5-45f3-b874-aa04991f7e33" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="14" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region" msprop:FriendlyName="region" msprop:DbColumnName="region" msprop:design-time-name="a32b6a64-91ca-49d1-8361-2cd82c60304b" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="11" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="population_group" msprop:FriendlyName="population_group" msprop:DbColumnName="population_group" msprop:design-time-name="39a55eba-ccde-4806-bf48-dd9be43a657a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="density_group" msprop:FriendlyName="density_group" msprop:DbColumnName="density_group" msprop:design-time-name="8cf9c8b1-40c5-480b-aaf7-c7526a144758" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gdp_category" msprop:FriendlyName="gdp_category" msprop:DbColumnName="gdp_category" msprop:design-time-name="484b2739-93a3-4195-b850-c9622269a9ed" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="poverty_category" msprop:FriendlyName="poverty_category" msprop:DbColumnName="poverty_category" msprop:design-time-name="892a0225-f731-4cd1-9da7-3aa09b9e942d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="allegro_DIM_PAYMENT" msprop:DbTableName="DIM_PAYMENT" msprop:FriendlyName="DIM_PAYMENT" msprop:TableType="Table" msprop:DbSchemaName="allegro" msprop:design-time-name="61c31715-c31a-4adf-88f2-449a60228fd8">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="payment_id" msprop:FriendlyName="payment_id" msprop:DbColumnName="payment_id" msprop:design-time-name="6bf5ffb8-6957-487a-ae12-e0dd3c14cf54">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="payment_sequences" msprop:FriendlyName="payment_sequences" msprop:DbColumnName="payment_sequences" msprop:design-time-name="13e770e4-63de-4220-a195-95fd1638933f" type="xs:int" minOccurs="0" />
+                  <xs:element name="payment_main_type" msprop:FriendlyName="payment_main_type" msprop:DbColumnName="payment_main_type" msprop:design-time-name="8bef5cd4-adee-4681-9eab-ffadbdb499d7" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="11" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="payment_value" msprop:FriendlyName="payment_value" msprop:DbColumnName="payment_value" msprop:design-time-name="95896f25-59c7-4648-9421-714de845a376" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="allegro_DIM_PRODUCT" msprop:DbTableName="DIM_PRODUCT" msprop:FriendlyName="DIM_PRODUCT" msprop:TableType="Table" msprop:DbSchemaName="allegro" msprop:design-time-name="938b6379-51c4-43eb-be9a-2451c5d66b87">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="product_id" msprop:FriendlyName="product_id" msprop:DbColumnName="product_id" msprop:design-time-name="bbb7896d-6623-4c8f-8c7e-fd22ffb90f71">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="product_category" msprop:FriendlyName="product_category" msprop:DbColumnName="product_category" msprop:design-time-name="de8b86e1-95ac-4ea9-8a50-31d9524f6d04" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="46" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="product_photos" msprop:FriendlyName="product_photos" msprop:DbColumnName="product_photos" msprop:design-time-name="633fb7d9-8a65-4686-8da4-35766b6e0da6" type="xs:int" minOccurs="0" />
+                  <xs:element name="product_weights" msprop:FriendlyName="product_weights" msprop:DbColumnName="product_weights" msprop:design-time-name="6f5a6a5c-764e-46dd-bdae-bce50971e04b" type="xs:int" minOccurs="0" />
+                  <xs:element name="product_length" msprop:FriendlyName="product_length" msprop:DbColumnName="product_length" msprop:design-time-name="eb283142-03d7-4fbf-b985-ea4fd36e7b7e" type="xs:int" minOccurs="0" />
+                  <xs:element name="product_height" msprop:FriendlyName="product_height" msprop:DbColumnName="product_height" msprop:design-time-name="17e399cb-c35a-4da9-8ca9-88a40565416a" type="xs:int" minOccurs="0" />
+                  <xs:element name="product_width" msprop:FriendlyName="product_width" msprop:DbColumnName="product_width" msprop:design-time-name="a991d9c0-6e9c-4c04-94f0-7acbc42dc0d3" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="allegro_DIM_SALESPERSON" msprop:DbTableName="DIM_SALESPERSON" msprop:FriendlyName="DIM_SALESPERSON" msprop:TableType="Table" msprop:DbSchemaName="allegro" msprop:design-time-name="f8d40358-9669-44e9-ac75-293a24144bbc">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="seller_id" msprop:FriendlyName="seller_id" msprop:DbColumnName="seller_id" msprop:design-time-name="282d913e-242c-43fc-8716-05db4a604c96">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="seller_city" msprop:FriendlyName="seller_city" msprop:DbColumnName="seller_city" msprop:design-time-name="5b08a931-3b5c-4b24-9d4c-749a4c20c4fc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="seller_state" msprop:FriendlyName="seller_state" msprop:DbColumnName="seller_state" msprop:design-time-name="87d1f791-8afd-4c8a-9bc4-e08cc93a0e8a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="state" msprop:FriendlyName="state" msprop:DbColumnName="state" msprop:design-time-name="03aea67b-1192-4ba5-bfd8-a5d62c010138" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="19" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="capital" msprop:FriendlyName="capital" msprop:DbColumnName="capital" msprop:design-time-name="a64e61e3-9c8d-46f8-b775-205112a7fe99" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="14" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region" msprop:FriendlyName="region" msprop:DbColumnName="region" msprop:design-time-name="bf9dd150-a859-4631-a91f-0cc371a01df0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="11" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="population_group" msprop:FriendlyName="population_group" msprop:DbColumnName="population_group" msprop:design-time-name="62041a51-a2ae-4b15-bbe3-3402ee6be266" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="density_group" msprop:FriendlyName="density_group" msprop:DbColumnName="density_group" msprop:design-time-name="3a889024-2249-4f84-9e18-210182e08fef" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gdp_category" msprop:FriendlyName="gdp_category" msprop:DbColumnName="gdp_category" msprop:design-time-name="cf43b136-9365-4663-808c-ec3c153a2e73" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="poverty_category" msprop:FriendlyName="poverty_category" msprop:DbColumnName="poverty_category" msprop:design-time-name="d08d0939-c628-4736-975d-d0f1b4ee730a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="allegro_DIM_TIME" msprop:DbTableName="DIM_TIME" msprop:FriendlyName="DIM_TIME" msprop:TableType="Table" msprop:DbSchemaName="allegro" msprop:design-time-name="8445ade8-ebfe-443a-bffe-b16d044f4ee2">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="time_id" msprop:FriendlyName="time_id" msprop:DbColumnName="time_id" msprop:design-time-name="e38d95eb-c359-47c4-b396-4ecb27c41a3a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="year" msprop:FriendlyName="year" msprop:DbColumnName="year" msprop:design-time-name="6675609b-9102-47e6-b66d-842b8df713ba" type="xs:int" minOccurs="0" />
+                  <xs:element name="month" msprop:FriendlyName="month" msprop:DbColumnName="month" msprop:design-time-name="4f66f930-3b16-4e6b-b1d9-81f700db60b5" type="xs:int" minOccurs="0" />
+                  <xs:element name="month_name" msprop:FriendlyName="month_name" msprop:DbColumnName="month_name" msprop:design-time-name="67562987-7e8e-49ce-ad6c-84b3b89c94ad" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="day" msprop:FriendlyName="day" msprop:DbColumnName="day" msprop:design-time-name="ea9a7ea9-405b-4cfe-8ddd-a06ab3406ae1" type="xs:int" minOccurs="0" />
+                  <xs:element name="weekday_name" msprop:FriendlyName="weekday_name" msprop:DbColumnName="weekday_name" msprop:design-time-name="0ea00bd8-2ab8-4d57-af96-d91c19752983" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="hour" msprop:FriendlyName="hour" msprop:DbColumnName="hour" msprop:design-time-name="febbb294-0610-47bc-928d-1cfbafa3aad8" type="xs:int" minOccurs="0" />
+                  <xs:element name="minute" msprop:FriendlyName="minute" msprop:DbColumnName="minute" msprop:design-time-name="a8ba9bc9-72d6-4077-9df2-97c4d21dffe5" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="allegro_FACT_ORDER" msprop:DbTableName="FACT_ORDER" msprop:FriendlyName="FACT_ORDER" msprop:TableType="Table" msprop:DbSchemaName="allegro" msprop:design-time-name="f9b1cf59-11d6-4bba-aa35-026e2a6bbf04">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="payment_id" msprop:FriendlyName="payment_id" msprop:DbColumnName="payment_id" msprop:design-time-name="fca14c04-1db1-4c17-bdfe-e1446bafcd77" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="product_id" msprop:FriendlyName="product_id" msprop:DbColumnName="product_id" msprop:design-time-name="4f30a3fd-e36d-434c-9df7-8d91caa69551" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="seller_id" msprop:FriendlyName="seller_id" msprop:DbColumnName="seller_id" msprop:design-time-name="3b37126c-8920-4d40-b7f7-4b0514e19c7e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="customer_id" msprop:FriendlyName="customer_id" msprop:DbColumnName="customer_id" msprop:design-time-name="86b400bf-e0be-4b81-8e8e-0202e0350aa1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="32" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="order_purchase_timestamp" msprop:FriendlyName="order_purchase_timestamp" msprop:DbColumnName="order_purchase_timestamp" msprop:design-time-name="f9133eee-1878-4f68-a2aa-6db74e53522f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="order_approved_at" msprop:FriendlyName="order_approved_at" msprop:DbColumnName="order_approved_at" msprop:design-time-name="c0885223-88e0-40ee-858c-525c9e2c149a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="order_delivery_carrier_date" msprop:FriendlyName="order_delivery_carrier_date" msprop:DbColumnName="order_delivery_carrier_date" msprop:design-time-name="46d09d26-e83a-4006-8047-4e0a9c3b4948" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="order_delivery_customer_date" msprop:FriendlyName="order_delivery_customer_date" msprop:DbColumnName="order_delivery_customer_date" msprop:design-time-name="1872d6e6-66f1-47c2-9e1c-57675b245177" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="order_estimated_delivery_date" msprop:FriendlyName="order_estimated_delivery_date" msprop:DbColumnName="order_estimated_delivery_date" msprop:design-time-name="07227a5d-fa81-4397-856b-d12b9f91e1cc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="order_item_id" msprop:FriendlyName="order_item_id" msprop:DbColumnName="order_item_id" msprop:design-time-name="a475a0ae-4ff8-4d8c-afba-d06a10975029" type="xs:int" minOccurs="0" />
+                  <xs:element name="time_to_approved" msprop:FriendlyName="time_to_approved" msprop:DbColumnName="time_to_approved" msprop:design-time-name="f39f9a66-6e05-41d4-b265-4008e2d6be46" type="xs:int" minOccurs="0" />
+                  <xs:element name="delivery_time" msprop:FriendlyName="delivery_time" msprop:DbColumnName="delivery_time" msprop:design-time-name="adaa0ec3-de7f-4353-91d4-18150da98951" type="xs:int" minOccurs="0" />
+                  <xs:element name="delivery_latency" msprop:FriendlyName="delivery_latency" msprop:DbColumnName="delivery_latency" msprop:design-time-name="a546ceac-707c-4ddb-a9e2-073a98c5b53a" type="xs:int" minOccurs="0" />
+                  <xs:element name="package_weight" msprop:FriendlyName="package_weight" msprop:DbColumnName="package_weight" msprop:design-time-name="8227b1b9-2197-4091-80bf-dc01eab52eec" type="xs:double" minOccurs="0" />
+                  <xs:element name="price" msprop:FriendlyName="price" msprop:DbColumnName="price" msprop:design-time-name="ad061a3c-136d-42fa-8273-2563ef712ca5" type="xs:double" minOccurs="0" />
+                  <xs:element name="freight_value" msprop:FriendlyName="freight_value" msprop:DbColumnName="freight_value" msprop:design-time-name="afca7bfd-b7e6-4197-93ea-824eff14c10f" type="xs:double" minOccurs="0" />
+                  <xs:element name="total" msprop:FriendlyName="total" msprop:DbColumnName="total" msprop:design-time-name="f0e9a08e-fd6f-4fb7-a518-af9a38ff62ea" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//allegro_DIM_CUSTOMER" />
+          <xs:field xpath="customer_id" />
+        </xs:unique>
+        <xs:unique name="allegro_DIM_PAYMENT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//allegro_DIM_PAYMENT" />
+          <xs:field xpath="payment_id" />
+        </xs:unique>
+        <xs:unique name="allegro_DIM_PRODUCT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//allegro_DIM_PRODUCT" />
+          <xs:field xpath="product_id" />
+        </xs:unique>
+        <xs:unique name="allegro_DIM_SALESPERSON_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//allegro_DIM_SALESPERSON" />
+          <xs:field xpath="seller_id" />
+        </xs:unique>
+        <xs:unique name="allegro_DIM_TIME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//allegro_DIM_TIME" />
+          <xs:field xpath="time_id" />
+        </xs:unique>
+        <xs:keyref name="FK_fact_approved_date" refer="allegro_DIM_TIME_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="order_approved_at" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_customer" refer="Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="customer_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_customer_date" refer="allegro_DIM_TIME_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="order_delivery_customer_date" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_product" refer="allegro_DIM_PRODUCT_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="product_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_order_payment" refer="allegro_DIM_PAYMENT_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="payment_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_purchase_date" refer="allegro_DIM_TIME_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="order_purchase_timestamp" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_seller" refer="allegro_DIM_SALESPERSON_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="seller_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_carrier_date" refer="allegro_DIM_TIME_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="order_delivery_carrier_date" />
+        </xs:keyref>
+        <xs:keyref name="FK_fact_estimated_date" refer="allegro_DIM_TIME_Constraint1">
+          <xs:selector xpath=".//allegro_FACT_ORDER" />
+          <xs:field xpath="order_estimated_delivery_date" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Mock_x0020_Allegro xmlns="" />
+  </Schema>
+</DataSourceView>

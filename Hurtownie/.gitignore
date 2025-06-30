@@ -1,0 +1,48 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sdf
+*.cache
+*.dbmdl
+*.pdb
+*.bak
+*.log
+
+# Build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+
+# SSIS
+*.ispac
+*.dtsx.cache
+*.dtproj.user
+*.DeploymentSettings
+*.manifest
+*.DeployManifest
+
+# SSAS
+*.asdatabase
+*.abf
+*.configsettings
+*.dwproj.user
+*.bim.layout
+*.bim_*.settings
+
+# SQL Server Data Tools
+*.rptproj.user
+*.rptproj.bak
+*.dbproj.user
+*.dbmdl
+
+# Package deployment files
+*.deploymentconfig
+*.deploymentmanifest
+*.publish.xml
+*.publishsettings
+*.sql
+*.trc

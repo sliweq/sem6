@@ -1,0 +1,248 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="329e6c6a-8209-4c17-924d-86ca60ed3cea" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM TIME</ID>
+  <Name>DIM TIME</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1991" scrolltop="-5834" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11324" y="15028" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_TIME" left="-774" top="-3387" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5212" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00005c1400009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Sliwka_DIM_TIME" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1991</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5834</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-774</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-3387</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f005ac74-842c-49fd-b3e6-2919efe779f0">
+    <DataSourceViewID>Adventure Works2019WithTime</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="91d2a41a-ac7a-403a-9501-6722aac159bf">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="88fcc31d-10f0-4b51-b6f1-9e4b64f7de1b">
+      <ID>PK TIME</ID>
+      <Name>PK TIME</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>1134</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="461d3964-af0d-47d7-95e5-a9550df47b74">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3e5c3a5e-f06c-49a9-bdc7-17a4e2a1243b">
+            <TableID>Sliwka_DIM_TIME</TableID>
+            <ColumnID>PK_TIME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4c6f3c5e-0a8a-45f2-98b5-7200aee9186e">
+          <AttributeID>ROK</AttributeID>
+          <Name>ROK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1284f9c1-67c6-432f-bb5e-2e97801f2110">
+          <AttributeID>KWARTAL</AttributeID>
+          <Name>KWARTAL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5e19d212-fa6c-48e2-a5bb-567299d7be24">
+          <AttributeID>MIESIAC</AttributeID>
+          <Name>MIESIAC</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6f7da6e1-229d-406a-b0cf-39c6b02f82ff">
+          <AttributeID>MIESIAC SLOWNIE</AttributeID>
+          <Name>MIESIAC SLOWNIE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8b0eff9d-39ba-48b4-ad21-f6bc05d09cee">
+          <AttributeID>DZIEN TYGODNIA SLOWNIE</AttributeID>
+          <Name>DZIEN TYGODNIA SLOWNIE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="088a3bd8-5488-4451-b966-2fdc6a659d24">
+          <AttributeID>DZIEN MIESIACA</AttributeID>
+          <Name>DZIEN MIESIACA</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="00a1059e-39dc-4356-b274-634565734a41">
+      <ID>ROK</ID>
+      <Name>ROK</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="016d6827-e83a-4574-bc1f-45be6bb14e4b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d524d9b1-f145-489f-9b51-eb04dff571d4">
+            <TableID>Sliwka_DIM_TIME</TableID>
+            <ColumnID>ROK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6491123c-c35b-486f-a720-71b46d2a8ad9">
+      <ID>KWARTAL</ID>
+      <Name>KWARTAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d698cd5c-495a-4f79-8dde-aa58fadf1a48">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="df236bcf-916d-4568-9f6a-88f61c0626aa">
+            <TableID>Sliwka_DIM_TIME</TableID>
+            <ColumnID>KWARTAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dfc9a4a5-73b5-4860-b7fd-36b57013d8e9">
+      <ID>MIESIAC</ID>
+      <Name>MIESIAC</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="05513f9d-8c9f-4523-bd74-2af9ec30f6ad">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="58062ee7-360f-4b05-854b-83b0403ef12b">
+            <TableID>Sliwka_DIM_TIME</TableID>
+            <ColumnID>MIESIAC</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4faa16c-deea-4b9e-a32b-1f75e05ee574">
+      <ID>MIESIAC SLOWNIE</ID>
+      <Name>MIESIAC SLOWNIE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cd130947-b381-4f15-9b28-7b42af192ab2">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ba3bcce1-f802-400b-be5f-82cb0b42b36a">
+            <TableID>Sliwka_DIM_TIME</TableID>
+            <ColumnID>MIESIAC_SLOWNIE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e5c68187-de61-405f-8b92-33d2cc6d1fc5">
+      <ID>DZIEN TYGODNIA SLOWNIE</ID>
+      <Name>DZIEN TYGODNIA SLOWNIE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="154a834f-0986-4fb6-964f-7d1581fcb316">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8aa2b5c0-30f3-4955-b08d-52e0f58573e4">
+            <TableID>Sliwka_DIM_TIME</TableID>
+            <ColumnID>DZIEN_TYGODNIA_SLOWNIE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d71ccd5-c548-4918-9040-905d49b66fe0">
+      <ID>DZIEN MIESIACA</ID>
+      <Name>DZIEN MIESIACA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f0d632f-b1ad-4bc7-a55a-b895ad11efb7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aebeb705-ce7b-45bf-9a28-b9e738cd20f8">
+            <TableID>Sliwka_DIM_TIME</TableID>
+            <ColumnID>DZIEN_MIESIACA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="6134dcc2-87fe-48f7-bb5e-6cad4231bc0b">
+      <ID>Hierarchy</ID>
+      <Name>HierarchyTime</Name>
+      <Levels>
+        <Level dwd:design-time-name="73cdf7fb-1d67-452d-b6a3-3ba2fe314cf8">
+          <ID>ROK</ID>
+          <Name>ROK</Name>
+          <SourceAttributeID>ROK</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6e349df9-fb25-4808-9572-588610c1ac0b">
+          <ID>KWARTAL</ID>
+          <Name>KWARTAL</Name>
+          <SourceAttributeID>KWARTAL</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="ed168717-77e3-4fde-8107-ebab1cbec145">
+          <ID>MIESIAC</ID>
+          <Name>MIESIAC</Name>
+          <SourceAttributeID>MIESIAC</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="a239308d-de9b-48e5-894e-b98656ddc5fb">
+          <ID>DZIEN MIESIACA</ID>
+          <Name>DZIEN MIESIACA</Name>
+          <SourceAttributeID>DZIEN MIESIACA</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
